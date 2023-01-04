@@ -1,0 +1,70 @@
+@import "SCSS/mixin";
+@import "SCSS/variable";
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+
+    .gallery-item {
+        display: inline-block;
+        @include container_size(33.33%, 320px);
+        position: relative;
+        overflow: hidden;
+
+        transition: width .5s linear;
+
+        background-color: #222222;
+
+
+
+        .item__title {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate3d(-50%, -50%, 0);
+
+            @include font(25px, 300, #ffffff);
+            font-family: "Source Sans Pro", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+
+            transition: opacity .5s linear;
+        }
+
+        .item__img {
+            border: none;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                transform: translate3d(-50%, -50%, 0);
+
+                opacity: 0.15;
+
+                transition: opacity .5s linear;
+            }
+        }
+
+    }
+
+    .gallery-item:hover {
+        @include container_size(50%, 320px);
+
+        .item__title {
+            display: opacity 0;
+        }
+
+        .item__img {
+            img {
+                opacity: 1;
+            }
+        }
+
+    }
+
+
+}

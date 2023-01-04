@@ -1,0 +1,131 @@
+@import "SCSS/mixin";
+@import "SCSS/variable";
+/* Header */
+.header {
+
+    @include container_size(100%, 100px);
+
+    
+    position: absolute;
+    z-index: 1000;
+
+    .header__container {
+        @include container_size(100%, 70px);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        padding: 0 150px 0 95px;
+
+    }
+
+    .header_logo {
+        @include font (25px, 700, #ffffff);
+        @include text_style (capitalize);
+
+    }
+}
+
+/*Nav*/
+
+.menu {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+
+
+    .nav_link {
+        display: inline-block;
+
+        @include font (16px, 400, #ffffff);
+        @include text_style(capitalize, none);
+        @include container_size(75px, 35px);
+
+        text-align: center;
+        vertical-align: middle;
+        padding: 8px 0 8px 0;
+
+    }
+
+    .nav_link:hover {
+
+        outline: 1px solid #ffffff;
+        border-radius: 40px;
+    }
+}
+
+
+/* Container */
+
+.container-screen {
+
+    position: relative;
+
+    @include container_size (100%, 740px);
+    max-width: 1366px;
+
+    background: url(Image/layer/layer.jpg) center no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 50px;
+
+    /* Logo */
+
+    .logo-content {
+
+        @include container_size (600px, 140px);
+        text-align: center;
+
+        .logo-content__head {
+
+            @include font (36px, 300);
+            @include text-style (uppercase);
+            font-family: "Source Sans Pro", sans-serif;
+            letter-spacing: 5px;
+
+            margin-bottom: 45px;
+        }
+
+        .logo-content__description {
+            @include font (16px, 400);
+            line-height: 1.8;
+        }
+
+        .logo-content__button {
+            @include container_size (32px, 32px);
+
+            margin-top: 220px;
+            padding: 0;
+
+            border-radius: 100%;
+
+            border: none;
+            background: none;
+
+            transition: background .1s linear;
+        }
+
+        .logo-content__button:after {
+            content: "";
+            display: inline-block;
+
+            @include container_size(6px, 6px);
+            border-bottom: 1px solid #d1f2eb;
+            border-right: 1px solid #d1f2eb;
+
+            transform: rotate(45deg);
+
+            margin-bottom: 2px;
+
+        }
+
+        .logo-content__button:hover {
+            background-color: #19bd9a;
+        }
+    }
+}

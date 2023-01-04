@@ -1,0 +1,167 @@
+@import "SCSS/mixin";
+@import "SCSS/variable";
+
+
+.impressed-content {
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 100px;
+    padding-left: 95px;
+
+
+
+    max-width: 50%;
+    max-height: 100%;
+    color: #abacac;
+
+    .content__title {
+        font-family: "Source Sans Pro", sans-serif;
+        @include font (20px, 300);
+        @include text_style(uppercase);
+
+        margin-bottom: 60px;
+    }
+
+    .content__text {
+        font-size: 14px;
+
+        .text-first {
+            margin-bottom: 60px;
+        }
+
+        .text-second {
+            text-transform: uppercase;
+
+
+            span {
+                color: #19bd9a;
+            }
+        }
+    }
+
+    .image {
+        position: absolute;
+        top: -80px;
+        left: 807px;
+    }
+}
+
+/* Portfolio*/
+
+.groups {
+    margin: 0 auto;
+    margin-bottom: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 590px;
+    font-size: 16px;
+
+    .groups__item {
+        display: inline-block;
+
+        text-align: center;
+    }
+
+    .groups__item:after {
+        content: "";
+        display: block;
+        @include container_size(inherit, 2px);
+
+        background: #19bd9a;
+
+        margin: 10px auto;
+        opacity: 0;
+
+        transition: opacity .2s linear;
+    }
+
+    .groups__item:hover:after {
+        opacity: 1;
+    }
+}
+
+/*Gallary*/
+
+.gallary {
+    @include container_size(100%);
+
+    .gallary__column {
+        @include container_size(270px, 950px);
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .gallary__column:last-child {
+        margin-right: 0;
+    }
+}
+
+.column__item {
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        z-index: 2;
+        text-align: center;
+        transition: opacity .2s linear;
+    }
+
+
+}
+
+.column__item:hover img {
+    opacity: 0.2;
+}
+
+
+.column__item {
+    position: relative;
+    background: #000;
+
+    .item__content {
+
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        padding: 60px 40px 0 40px;
+        border: 0;
+
+        .content__title {
+            display: inline-block;
+            @include font (25px, 300);
+            @include text_style(uppercase);
+            color: #19bd9a;
+
+            padding-left: 40px;
+
+            font-family: "Source Sans Pro", sans-serif;
+        }
+
+        .content__title:after {
+            content: "";
+            display: block;
+            @include container_size(25px, 1px);
+
+            background: #19bd9a;
+
+            margin-top: 20px;
+            margin-bottom: 30px;
+
+        }
+
+        .content__text {
+
+            @include font(12px, 400, #81868e);
+        }
+    }
+
+}

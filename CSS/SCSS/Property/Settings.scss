@@ -1,0 +1,119 @@
+/* Settings */
+@import "SCSS/mixin";
+@import "SCSS/variable";
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    color: #333;
+    background-color: #f3f3f3;
+    line-height: 1.2;
+
+    position: relative;
+    @include container_size (100%, 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+
+/*Section*/
+
+
+.section-1366 {
+    @include container-size (100%, auto);
+    max-width: 1366px;
+
+    position: relative;
+
+    margin: 0 auto;
+
+
+}
+
+.section-1336--grey {
+    background-color: #f3f3f3;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.section-1366--impressed {
+    background: url(Image/impresed/1.jpg) center no-repeat;
+    background-size: cover;
+
+    max-width: 1366px;
+    max-height: 390px;
+    margin: 130px auto 0;
+}
+
+.section-1366--review {
+    background: url(Image/submit/layer.jpg) center no-repeat;
+    background-size: cover;
+    max-width: 1366px;
+}
+
+
+.section-1110 {
+    @include container-size (81.3%, auto);
+    max-width: 1110px;
+
+    position: relative;
+    margin: 0 auto;
+}
+
+.section-840 {
+    @include container-size (61.5%, auto);
+    max-width: 840px;
+
+    position: relative;
+    margin: 0 auto;
+
+}
+
+
+
+/* Head */
+
+.head__bouncy {
+    padding-top: 80px;
+    text-align: center;
+
+    .head__title {
+        @include font (20px, 300, #333b46);
+        @include text_style(uppercase);
+        font-family: "Source Sans Pro", sans-serif;
+
+
+        margin-bottom: 40px;
+    }
+
+    .head__title--white {
+        color: #fff;
+    }
+
+    .head__text {
+        line-height: 1.8;
+        @include font (12px, 400, #81868e);
+
+        margin-bottom: 50px;
+    }
+
+}
+
+.head__bouncy--padding-60px {
+    padding-top: 60px;
+}

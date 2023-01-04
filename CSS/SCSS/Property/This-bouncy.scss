@@ -1,0 +1,59 @@
+@import "SCSS/mixin";
+@import "SCSS/variable";
+
+.section-840 {
+    padding: 30px 0;
+
+    .this-bouncy {
+        position: relative;
+
+        .this-bouncy__description {
+            padding: 110px 370px 100px 0;
+
+            .description__title {
+                margin-bottom: 40px;
+
+                @include font (20px, 300, #333b46);
+                @include text_style(uppercase);
+                font-family: "Source Sans Pro", sans-serif;
+            }
+
+            .description__text {
+                margin-bottom: 25px;
+
+                text-align: justify;
+                line-height: 1.8;
+
+                @include font (12px, 400, #81868e);
+            }
+
+            .description__button {
+                @include font (12px, 400, #333b46);
+                @include text_style(capitalize);
+
+                padding: 7px 20px;
+
+                border: 1px solid #333b46;
+                border-radius: 15px;
+                
+                transition: border-color 0.1s linear, color 0.1s linear;
+            }
+            .description__button:hover{
+                border-color: #b41b1b;
+                color: #b41b1b;
+            }
+            
+            
+        } //   /.this-bouncy__description
+
+        .this-bouncy__image{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            
+            transform: translateY(-50%);
+        }
+        
+    } //  /.this-bouncy
+
+} //  /.section-840

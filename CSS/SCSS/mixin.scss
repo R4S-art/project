@@ -1,0 +1,15 @@
+@mixin container_size ($width, $height:auto){
+  width: $width;
+ height: $height;
+}
+
+@mixin font ($font-size:15px, $font_weight: 400, $color: #ffffff ){
+    font-size: $font-size;
+    font-weight: $font_weight;
+    color: $color;
+}
+
+@mixin text_style ($text-transform:none, $text-decoration: none){
+    text-transform: $text-transform;
+    text-decoration: $text-decoration;
+}
