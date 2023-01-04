@@ -1,0 +1,24 @@
+//comment
+
+
+$bgcolor: #e5e5e5;
+
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.sircle {
+    display: inline-block;
+    width: 1.65px;
+    height: 1.65px;
+
+    
+    background-color: red;
+    border: 10px solid black;
+}
