@@ -142,10 +142,12 @@
 
         .item__img {
             border-radius: 100%;
+            margin-bottom: 20px;
         }
 
         .item__suptitle {
             text-align: center;
+            @include font(14px, 300,#81868e);
         }
 
     }

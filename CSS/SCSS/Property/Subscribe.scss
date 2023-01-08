@@ -1,0 +1,30 @@
+@import "SCSS/mixin";
+@import "SCSS/variable";
+
+/* Subscribe*/
+.form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.subscribe__input {
+    @include font(14px, 400, #cfd3d4);
+    padding: 15px 240px 15px 20px;
+
+    background: none;
+    border: 1px solid #cfd3d4;
+}
+
+.subscribe__button {
+
+    font-family: "Source Sans Pro", sans-serif;
+    @include font (20px, 300);
+    @include text_style(uppercase);
+
+    background-color: #19bd9a;
+    text-align: center;
+    border: none;
+    padding: 10px 60px;
+    margin-left: 5px;
+}

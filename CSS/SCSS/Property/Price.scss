@@ -1,0 +1,70 @@
+@import "SCSS/mixin";
+@import "SCSS/variable";
+
+/* Price */
+
+.price__container {
+    @include container_size(100%, 300px);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.price__item {
+    position: relative;
+    @include container_size(240px, 100%);
+    background-color: #ffffff;
+
+    .item__title {
+        @include container_size(100%, 80px);
+        background-color: #19bd9a;
+        padding: 30px 68px;
+        text-align: center;
+
+        a {
+            @include font (20px, 700);
+            @include text_style(uppercase);
+        }
+    }
+
+    .item__offer {
+        @include font(20px, 400, #81868e);
+        text-align: center;
+        padding: 68px 0 107px 0;
+
+        span {
+            display: block;
+            @include font(42px, 400, #19bd9a);
+            font-family: "Source Sans Pro", sans-serif;
+        }
+    }
+
+    .item__hover {
+        display: none;
+        padding: 30px;
+
+        p {
+            line-height: 1;
+            @include font(14px, 400, #81868e);
+        }
+    }
+}
+
+.price__item:hover {
+    .item__title {
+        position: absolute;
+        top: 100%;
+        transform: translateY(-100%);
+
+
+    }
+
+    .item__hover {
+        display: block;
+    }
+
+    .item__offer {
+        display: none;
+    }
+
+}

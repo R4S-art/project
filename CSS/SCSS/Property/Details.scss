@@ -1,3 +1,6 @@
+@import "SCSS/mixin";
+@import "SCSS/variable";
+
 /* Details*/
 .details__images {
     @include container_size (220px, 60px);
